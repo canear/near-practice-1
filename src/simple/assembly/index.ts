@@ -1,4 +1,6 @@
-export function helloWorld(names: Array<string>): string {
-  //template literals use backticks ``
-  return names.map<string>(name => `Hello, ${name}.`).join(' ')
+//context|storage also exported as Context|Storage
+import { Context, Storage } from "near-sdk-as"
+
+export function helloWorld(): string{
+  return `Hello, ${Context.predecessor}`;
 }
